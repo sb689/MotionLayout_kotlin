@@ -21,13 +21,21 @@
     <Transition
             app:constraintSetStart="@+id/start"
             app:constraintSetEnd="@+id/end"
-            app:duration="3000">
+            app:duration="2000">
         <OnClick
                 app:targetId="@id/moon"
                 app:clickAction="toggle"
         />
 
-        <!-- TODO: Add KeyFrameSet and KeyPosition -->
+        <!-- Add KeyFrameSet and KeyPosition to distort straight path-->
+        <KeyFrameSet>
+            <KeyPosition
+                app:framePosition="50"
+                app:motionTarget="@id/moon"
+                app:keyPositionType="parentRelative"
+                app:percentY="0.5"
+                />
+        </KeyFrameSet>
     </Transition>
 
     <!-- Constraints to apply at the start of the animation -->
@@ -71,4 +79,7 @@
                 app:layout_constraintTop_toTopOf="@id/moon"
         />
     </ConstraintSet>
+
+
+
 </MotionScene>
