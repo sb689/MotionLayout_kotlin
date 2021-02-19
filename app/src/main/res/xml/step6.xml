@@ -29,6 +29,7 @@
         />
 
         <KeyFrameSet>
+<!--         KeyPosition to make the motion path to an arc-->
             <KeyPosition
                     app:framePosition="25"
                     app:motionTarget="@id/moon"
@@ -47,6 +48,8 @@
                     app:keyPositionType="parentRelative"
                     app:percentY="0.6"
             />
+
+<!--         KeyAttribute to make the moon bigger and rotate while in motion -->
             <KeyAttribute
                     app:framePosition="50"
                     app:motionTarget="@id/moon"
